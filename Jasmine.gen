@@ -1,0 +1,53 @@
+INITIALIZE_FILE
+"Jasmine.3dm"
+4
+ANCHOR_BUMP_MAP
+"bfrontbd.pcx"
+1
+160
+70
+0
+MIRROR_BUMP_MAP
+"bbackbd.pcx"
+NORMAL_BUMP_MAP
+"bheadfr.pcx"
+MIRROR_BUMP_MAP
+"bheadbk.pcx"
+BEGIN_RENDER
+WRITE_INSTRUCTION
+"<key><2>"
+"  <roty><2><2>"
+"  <roty><3><2>"
+"<endkey>"
+"<key><3>"
+"  <roty><2><-2>"
+"  <roty><3><-2>"
+"<endkey>"
+"<key><16>"
+"  <rotp><2><2>"
+"  <rotp><3><2>"
+"<endkey>"
+"<key><30>"
+"  <rotp><2><-2>"
+"  <rotp><3><-2>"
+"<endkey>"
+"<move><2><0:0>"
+"<move><3><0:0>"
+"<yprw><0>"
+"<movw><0>"
+"<yprw><1>"
+"<movw><1>"
+"<yprw><2>"
+"<movw><2>"
+"<yprw><3>"
+"<movw><3>"
+RENDER_TEXTURE
+"jfrontbd.pcx"
+"jbackbd.pcx"
+"jheadfr.pcx"
+"jheadbk.pcx"
+CLOSE_FILE
+
+
+
+

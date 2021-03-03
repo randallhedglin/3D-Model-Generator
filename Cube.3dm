@@ -1,0 +1,117 @@
+3-D Model Script: cube.3dm
+Number of Objects: <2>
+
+Object 0: Arm
+  Number of Vertices: <9>
+	0 <60,5,5>
+	1 <0,5,5>
+	2 <0,-5,5>
+	3 <60,-5,5>
+	4 <60,5,-5>
+	5 <0,5,-5>
+	6 <0,-5,-5>
+	7 <60,-5,-5>
+	8 <60,0,0>
+
+Object 1: Cube
+  Number of Vertices: <8>
+  Vertices:
+	0 <40,20,20>
+	1 <0,20,20>
+	2 <0,-20,20>
+	3 <40,-20,20>
+	4 <40,20,-20>
+	5 <0,20,-20>
+	6 <0,-20,-20>
+	7 <40,-20,-20>
+
+Pre-Render Instructions:
+clr: Set pallete entry
+
+<clr><1:255,0,0>
+<clr><2:0,255,0>
+<clr><3:0,0,255>
+<clr><4:255,255,0>
+<clr><5:0,255,255>
+<clr><6:255,0,255>
+<clr><7:128,0,0>
+<clr><8:0,128,0>
+<clr><9:0,0,128>
+<clr><10:128,128,0>
+<clr><11:0,128,128>
+<clr><12:128,0,128>
+
+
+Render Instructions:
+render: Begin render
+yprw: Add object's ypr to world ypr
+trns: Transform points
+movw: Move object according to world coordinates
+line: Draw line from point1 to point2 with color 3
+ypr: Add object1's ypr to object2
+move: Move object to point
+roty: Rotate yaw
+rotp: Rotate pitch
+rotr: Rotate roll
+sety: Set yaw
+setp: Set pitch
+setr: Set roll
+poly: Draw polygon
+prgb: Draw polygon with RGB color
+pers: Add perspective
+key: Process commands only if key is pressed
+endkey: Process all commands
+end: End render
+
+<render>
+
+<key><2>
+  <rotp><0><10>
+<endkey>
+<key><16>
+  <rotp><0><-10>
+<endkey>
+<yprw><0>
+<movw><0>
+
+<key><3>
+  <rotp><1><10>
+<endkey>
+<key><17>
+  <rotp><1><-10>
+<endkey>
+<ypr><1><0>
+<move><1><0:8>
+
+<key><25>
+  <pers>
+<endkey>
+
+<prgb><0:0><0:1><0:2><64,0,0>
+<prgb><0:0><0:3><0:2><0,64,0>
+<prgb><0:4><0:5><0:6><0,0,64>
+<prgb><0:4><0:7><0:6><64,64,0>
+<prgb><0:0><0:4><0:1><0,64,64>
+<prgb><0:4><0:5><0:1><64,0,64>
+<prgb><0:1><0:2><0:5><128,0,0>
+<prgb><0:6><0:2><0:5><0,128,0>
+<prgb><0:2><0:3><0:6><0,0,128>
+<prgb><0:7><0:3><0:6><128,128,0>
+<prgb><0:3><0:4><0:7><0,128,128>
+<prgb><0:0><0:4><0:3><128,0,128>
+
+<prgb><1:0><1:1><1:2><192,0,0>
+<prgb><1:0><1:3><1:2><0,192,0>
+<prgb><1:4><1:5><1:6><0,0,192>
+<prgb><1:4><1:7><1:6><192,192,0>
+<prgb><1:0><1:4><1:1><0,192,192>
+<prgb><1:4><1:5><1:1><192,0,192>
+<prgb><1:1><1:2><1:5><255,0,0>
+<prgb><1:6><1:2><1:5><0,255,0>
+<prgb><1:2><1:3><1:6><0,0,255>
+<prgb><1:7><1:3><1:6><255,255,0>
+<prgb><1:3><1:4><1:7><0,255,255>
+<prgb><1:0><1:4><1:3><255,0,255>
+
+<end>
+
